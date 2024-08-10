@@ -4,35 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi Search Engine Forms Demo</title>
-  <style>
-    body {
-      font-family: Arial;
-      background-color: black;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Multi Search Engine Forms Demo</h1>
+<br>
+<br>
 <section>
-<!-- specifies which web page the form will be interacting with. -->
-  <form action="https://www.yahoo.com/search">
-<!-- the label is set to the same ID as the input field which aids in accessibility. -->
-    <label for="yahoo-search-input">Search Yahoo:
-<!-- sets the input type to "text" ensuring it becomes a text field. The name attribute being set to "q" specifies the data being initially sent to the url. The id is set to specify a unique identifier which the label can be associated with.-->
-      <input type="text" name="q" id="yahoo-search-input">
-<!--sets the input type to "submit" ensuring it becomes a button. The value is set to specify the text within the button  -->
-      <input type="submit" value="Search!">
-    </label>
-  </form>
-<!--added <br> between forms to avoid "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets" from lighthouse analysis report -->
-  <br>
+  <div style="width: 400px; margin: auto;">
+  <!-- specifies which web page the form will be interacting with. -->
   <form action="https://www.google.com/search">
+    <!-- the label is set to the same ID as the input field which aids in accessibility. -->
     <label for="google-search-input">Search Google:
+      <!-- sets the input type to "text" ensuring it becomes a text field. The name attribute being set to "q" specifies the data being initially sent to the url. The id is set to specify a unique identifier which the label can be associated with.-->
       <input type="text" name="q" id="google-search-input">
+      <!--sets the input type to "submit" ensuring it becomes a button. The value is set to specify the text within the button  -->
       <input type="submit" value="Search!">
     </label>
   </form>
+  <!--added <br> between forms to avoid "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets" from lighthouse analysis report -->
   <br>
   <form action="https://www.bing.com/search">
     <label for="bing-search-input">Search Bing:
@@ -40,6 +30,15 @@
       <input type="submit" value="Search!">
     </label>
   </form>
+  <br>
+  <form action="https://www.yahoo.com/search">
+    <label for="yahoo-search-input">Search Yahoo:
+      <input type="text" name="q" id="yahoo-search-input">
+      <input type="submit" value="Search!">
+    </label>
+  </form>
+</div>
+  <br>
 </section>
 </body>
 </html>
